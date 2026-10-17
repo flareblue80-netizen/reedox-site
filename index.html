@@ -808,20 +808,20 @@ var fs=['merge','split','compress','rotate','organize','convert'];[].forEach.cal
     var section=document.getElementById('get');
     if(section)section.hidden=true;
   }else if(isAndroid&&btn){
-    btn.href='./release/REEDOX-1.0.0.apk';
-    btn.download='REEDOX-1.0.0.apk';
+    btn.href='https://github.com/flareblue80-netizen/reedox-site/releases/download/v1.0.1/REEDOX-1.01.apk';
+    btn.download='REEDOX-1.01.apk';
     if(label)label.textContent='Download Android APK';
     if(help)help.textContent='Download the REEDOX APK for Android.';
   }else if(isWindows&&btn){
-    btn.href='./release/REEDOX-1.0.0-x64.exe';
-    btn.download='REEDOX-1.0.0-x64.exe';
-    if(label)label.textContent='Download Windows installer';
-    if(help)help.textContent='Download the REEDOX installer for Windows.';
+    btn.href='https://github.com/flareblue80-netizen/reedox-site/releases/download/v1.0.1/REEDOX-Windows-Installer.zip';
+    btn.download='REEDOX-Windows-Installer.zip';
+    if(label)label.textContent='Download Windows installer (ZIP)';
+    if(help)help.textContent='Download and extract the Windows ZIP, then run the installer inside.';
   }else if(btn){
-    btn.href='./release/REEDOX-1.0.0-x64.exe';
-    btn.download='REEDOX-1.0.0-x64.exe';
-    if(label)label.textContent='Download REEDOX for Windows';
-    if(help)help.textContent='Windows and Android downloads are available here.';
+    btn.href='https://github.com/flareblue80-netizen/reedox-site/releases/download/v1.0.1/REEDOX-Windows-Installer.zip';
+    btn.download='REEDOX-Windows-Installer.zip';
+    if(label)label.textContent='Download REEDOX for Windows (ZIP)';
+    if(help)help.textContent='Download and extract the Windows ZIP, then run the installer inside.';
   }
   if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){
     window.addEventListener('load',function(){navigator.serviceWorker.register('./service-worker.js').catch(function(){});});
