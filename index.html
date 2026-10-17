@@ -799,7 +799,8 @@ var fs=['merge','split','compress','rotate','organize','convert'];[].forEach.cal
   var isCapacitor=!!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform());
   var isElectron=/Electron/i.test(ua);
   var isStandalone=window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;
-  var isInstalled=isCapacitor||isElectron||isStandalone;
+  var isAndroidWebView=/;\s*wv\)/i.test(ua)||(/Android/i.test(ua)&&/Version\/4\.0/i.test(ua)&&/Chrome\//i.test(ua));
+  var isInstalled=isCapacitor||isElectron||isStandalone||isAndroidWebView;
   var isAndroid=/Android/i.test(ua);
   var isWindows=/Windows/i.test(ua);
   if(isInstalled){
